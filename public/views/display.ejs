@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <table border="1" cellspacing="0" cellpadding="10">
+         <tr>
+             <td>username</td>
+             <td>gender</td>
+             <td>email</td>
+             <td>password</td> 
+             <td>password</td>
+             
+
+         </tr>
+         
+            <% record.forEach((row)=>{ %>
+                <tr>
+                    <td> <%= row.username %> </td>
+                    <td> <%= row.gender  %> </td>
+                   <td> <%= row.email  %> </td>
+                  <td> <a href="/edit/<%= row._id %>"> edit</a></td>
+                  <td> <a href="/delete/<%= row._id %>"> delete</a></td>
+                </tr>
+            <%   }) %>
+         </tr>
+
+
+        </table>
+    </body>
+</html>
